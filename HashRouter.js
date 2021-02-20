@@ -1,4 +1,4 @@
-class HashRouter {
+export default class HashRouter {
     currentUrl = '';
     handlers = {};
 
@@ -24,7 +24,7 @@ class HashRouter {
     on(evName, listener) {
         this.handlers[evName] = listener;
     }
-    
+
     emit(evName, ...args) {
         const handler = this.handlers[evName];
         if (handler) {
