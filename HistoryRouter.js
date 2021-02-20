@@ -1,4 +1,4 @@
-class HistoryRouter {
+export default class HistoryRouter {
     currentUrl = '';
     handlers = {};
 
