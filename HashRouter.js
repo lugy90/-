@@ -17,17 +17,17 @@ export default class HashRouter {
     }
 
     refresh(event) {
-        let curURL = '',
-        oldURL = null;
+        let curURL = '';
+        // oldURL = null;
         if (event.newURL) {
-            oldURL = this.getHashPath(event.oldURL || '');
+            // oldURL = this.getHashPath(event.oldURL || '');
             curURL = this.getHashPath(event.newURL || '');
         } else {
             curURL = this.getHashPath(window.location.hash);
         }
         this.currentUrl = curURL;
         // 当hash路由发生变化时，则触发change事件
-        this.emit('change', curURL, oldURL);
+        this.emit('change', curURL);
     }
 
     on(evName, listener) {
